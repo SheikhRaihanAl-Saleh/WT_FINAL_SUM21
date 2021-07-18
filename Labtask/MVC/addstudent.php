@@ -1,8 +1,9 @@
-<?php include'header.php';
+<?php 
       include 'controllers/studentcontroller.php';
 ?>
 
-
+<html>
+<body>
 <center>
 <h2>Add Student</h2>
 <a href='allstudent.php'>all_student</a>
@@ -25,4 +26,5 @@
 </table>
 </form>
 </center>
-<?php include'footer.php';?>
+</html>
+</body>

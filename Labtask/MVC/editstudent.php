@@ -1,10 +1,11 @@
-<?php include'header.php';
+<?php 
       include 'controllers/studentcontroller.php';
 	  $id = $_GET["id"];
 	  $student = getStudent($id);
 ?>
 
-
+<html>
+<body>
 <center>
 <h2> Student Management</h2>
 <a href='allstudent.php'>all_student</a>
@@ -29,4 +30,5 @@
 </table>
 </form>
 </center>
-<?php include'footer.php';?>
+</html>
+</body>

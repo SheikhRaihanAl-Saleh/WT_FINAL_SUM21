@@ -1,10 +1,11 @@
- <?php include'header.php';
+ <?php 
        include 'controllers/studentcontroller.php';
 	   $student = getAllstudent();
 	   
  ?>
 
-
+<html>
+<body>
  <center>
      <a href="addstudent.php">add_student</a>
 	 <h3>All student</h3>
@@ -28,7 +29,7 @@
 					     //echo "<td>".$c["id"]."</td>";
 						 echo "<td>$i</td>";
 						 echo "<td>".$s["name"]."</td>";
-						 echo "<td>".$s["DOB"]."</td>";
+						// echo "<td>".$s["DOB"]."</td>";
 						 /*echo "<td>".$s["credit"]."</td>";
 						 echo "<td>".$s["cgpa"]."</td>";*/
 						 echo "<td><td>";
@@ -44,3 +45,5 @@
 	 </table>
 	 </center>
  </div>
+ </body>
+ </html>
