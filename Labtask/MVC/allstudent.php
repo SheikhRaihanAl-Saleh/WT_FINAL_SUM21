@@ -18,6 +18,7 @@
 			 <td>CGPA </td>
 			 <td></td>
 			 <td></td>
+			 <td></td>
 			
 		 </tr>
 		 <tbody>
@@ -29,9 +30,10 @@
 					     //echo "<td>".$c["id"]."</td>";
 						 echo "<td>$i</td>";
 						 echo "<td>".$s["name"]."</td>";
-						// echo "<td>".$s["DOB"]."</td>";
-						 /*echo "<td>".$s["credit"]."</td>";
-						 echo "<td>".$s["cgpa"]."</td>";*/
+						//echo "<td>".$s["DOB"]."</td>";
+						 echo "<td>".$s["credit"]."</td>";
+						 //echo "<td>".$s["cgpa"]."</td>";
+						 echo "<td><td>";
 						 echo "<td><td>";
 						 echo '<td><button><a href="editstudent.php?id='.$s["id"].'">Edit</a></button></td>';
 						 echo '<td><button>Delete</button></td>';

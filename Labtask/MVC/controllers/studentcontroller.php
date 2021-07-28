@@ -20,21 +20,21 @@ $hasError=false;
 		else{
 			$name=$_POST["name"];
 		}
-		if(empty($_POST["DOB"])){
+		/*if(empty($_POST["DOB"])){
 			$err_DOB="*DOB Required";
 			$hasError = true;
 		}
 		else{
 			$DOB=$_POST["DOB"];
-		}
-		/*if(empty($_POST["credit"])){
+		}*/
+		if(empty($_POST["credit"])){
 			$err_credit="*credit Required";
 			$hasError = true;
 		}
 		else{
 			$credit=$_POST["credit"];
 		}
-		if(empty($_POST["cgpa"])){
+		/*if(empty($_POST["cgpa"])){
 			$err_cgpa="*cgpa Required";
 			$hasError = true;
 		}
@@ -45,7 +45,7 @@ $hasError=false;
 		if(!$hasError){	
 		   //var_dump($rs);
 		   
-		 $rs= insertStudent($_POST["name"],$_POST["DOB"]);
+		 $rs= insertStudent($_POST["name"],$_POST["credit"]);
 		 if($rs===true){
 			   header("Location: allstudent.php");
 		   } 
@@ -69,7 +69,7 @@ $hasError=false;
 		}
 	}
  function insertStudent($name){
-	 $query ="insert into student values (NULL,'$name','$DOB')";
+	 $query ="insert into student values (NULL,'$name','$credit')";
 	 return execute($query);
  }
  function getAllStudent(){
