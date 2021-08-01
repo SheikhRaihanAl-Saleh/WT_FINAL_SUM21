@@ -1,5 +1,5 @@
 <?php
-    require_once 'Models/db_config.php';
+  
 	
     $name="";
 	$err_name="";
@@ -65,10 +65,6 @@
 		
         if(!$hasError){
 
-			$fileType=strtolower(pathinfo(basename($_FILES["image"]["name"]), PATHINFO_EXTENSION));
-			    $file = "storage/product_images/".uniqid()."$fileType";
-				move_uploaded_file($_FILES["image"]["tmp_name"],$file);
-			
 			$rs=insertProduct($_POST["name"],$_POST["c_id"],$_POST["price"],$_POST["quantity"],$_POST["description"],$file);
 			if($rs===true){
 				header("Location: all_products.php");
@@ -82,8 +78,8 @@
 
     }
 
-    function insertProduct($name,$c_id,$price,$qty,$desc,$img){
-		$query= "insert into products values (NULL,'$name',$c_id,$price,$qty,'$desc','$img')";
+    function insertProduct($name,$c_id,$price,$qty,$desc){
+		$query= "insert into products values (NULL,'$name',$c_id,$price,$qty,'$desc')";
 		return execute($query);	
 	}
     function getAllProducts(){
@@ -97,7 +93,7 @@
         $rs = get($query);
 		return $rs[0];	
 	}
-	function updateProducts($name,$c_id,$price,$qty,$desc,$img,$id){
+	function updateProducts($name,$c_id,$price,$qty,$desc,$id){
 		$query= "update products set name='$name', c_id=$c_id, price=$price, quantity=$qty, description='$desc' where id=$id";
 		return execute($query);
 	}

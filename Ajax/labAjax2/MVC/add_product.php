@@ -1,6 +1,5 @@
 <?php
     require_once 'Controllers/productcontroller.php';
-	require_once 'Controllers/categorycontroller.php';
 	
 ?>
 <html>
@@ -10,7 +9,7 @@
 		<fieldset>
 		    <legend align="center"><h1> Add Product:</h1></legend>
             <h5><?php echo $err_db; ?></h5>
-			<form action="" method="post" enctype="multipart/form-data">
+			<form action="" method="post">
 				<table align="center" >
 					<tr>
 					    <td><b><i>Name: <i><b></td>
@@ -29,7 +28,7 @@
 								?>
 							</select> 
 						</td>
-						<td><span><small><?php echo $err_types;?></small></span></td>
+						<!--<td><span><small><?php echo $err_types;?></small></span></td>-->
 					</tr>
                     <tr>
 					    <td><b><i>Price: <i><b></td>
