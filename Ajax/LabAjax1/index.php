@@ -17,7 +17,7 @@
 	</script>
 	
 	<body>
-		<button onclick="loadDock()">Click me</button>
+		<button onclick="loadDoc()">Click me</button>
 		<div id="demo"></div>
 	
 	
